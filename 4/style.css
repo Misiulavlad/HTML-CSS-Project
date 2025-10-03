@@ -1,0 +1,85 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #666;
+}
+
+.header-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #333;
+  transition: transform 0.3s ease;
+}
+
+.header-img img:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links li {
+  margin: 0.5rem;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+  background-color: lightgreen;
+  border: 2px solid #333;
+  border-radius: 7px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: green;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.social-links a:active {
+  background-color: darkgreen;
+}
