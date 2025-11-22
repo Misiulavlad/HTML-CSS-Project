@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// task1
+function createUser(name, age, email){
+    return{
+        name:name,
+        age:age,
+        emael:email,
+
+        introduce(){
+            return `Меня зовут ${this.name}, мне ${this.age} лет`;
+        },
+
+        updateEmail(newEmail) {
+      this.email = newEmail;
+      return `Email обновлён на: ${this.email}`;
+    }
+    };
+}
+
+const user = createUser("Влад", 25, "vlad@example.com");
+console.log(user.introduce());
+console.log(user.updateEmail("newmail@example.com"));
+console.log(user.email);
+
+
+
+// task2
+let car={
+    brand:"...",
+    model:"smth",
+    year:2010
+};
+
+function addCarMethods(carObj) {
+  carObj.getAge = function() {
+    const currentYear = new Date().getFullYear();
+    return currentYear - this.year;
+  };
+
+  carObj.getInfo = function() {
+    return `${this.brand} ${this.model}, ${this.year} года выпуска`;
+  };
+}
+
+addCarMethods(car);
+
+console.log(car.getAge());
+console.log(car.getInfo());
+
+
+// task3
+function processUsers(usersArray) {
+  const names = usersArray.map(user => user.name);
+  const total = usersArray.length;
+  const adults = usersArray.filter(user => user.age >= 18);
+  return { names, total, adults };
+}
+
+const users = [
+  { name: "Иван", age: 17 },
+  { name: "Мария", age: 22 },
+  { name: "Петр", age: 30 }
+];
+
+const result = processUsers(users);
+
+console.log(result.names);
+console.log(result.total);
+console.log(result.adults);
+
+
+// task4
+function mergeObjects(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+const a = { name: "Иван", age: 25 };
+const b = { age: 30, city: "Минск" };
+
+const res = mergeObjects(a, b);
+
+console.log(result); 
+
+
+// task5
+const products = [
+  { name: "Хлеб", price: 1.2, category: "Еда" },
+  { name: "Молоко", price: 1.5, category: "Еда" },
+  { name: "Телефон", price: 300, category: "Электроника" },
+  { name: "Ноутбук", price: 800, category: "Электроника" },
+  { name: "Книга", price: 12, category: "Книги" }
+];
+
+function filterByCategory(products, category) {
+  return products.filter(product => product.category === category);
+}
+
+console.log(filterByCategory(products, "Еда"));
+console.log(filterByCategory(products, "Электроника"));
+
+
+// task6
+function updateObjectProperty(obj, property, value) {
+  obj[property] = value;
+  return obj;
+}
+
+const user1 = { name: "Иван", age: 25 };
+
+const updated1 = updateObjectProperty(user, "age", 30);
+console.log(updated1); 
+
+const updated2 = updateObjectProperty(user, "city", "Минск");
+console.log(updated2); 
+
+
+
+// task7
+const students = [
+  { name: "Иван", grade: "A", subject: "Математика" },
+  { name: "Мария", grade: "B", subject: "Физика" },
+  { name: "Петр", grade: "C", subject: "История" }
+];
+
+function findStudentByName(students, name) {
+  return students.find(student => student.name === name);
+}
+
+console.log(findStudentByName(students, "Мария"));
+
+console.log(findStudentByName(students, "Иван"));
+
+
+
+// task8
+function testCarMethods() {
+  const car = { brand: "Toyota", model: "Corolla", year: 2015 };
+  addCarMethods(car);
+
+  return {
+    age: car.getAge(),
+    info: car.getInfo()
+  };
+}
+
+console.log(testCarMethods());
+
+
+// task9
+function convertObjectToArray(obj) {
+  return Object.entries(obj);
+}
+
+const person = { name: "John", age: 25 };
+console.log(convertObjectToArray(person));
+
+
+// task10
+const company = {
+  hr: { employees: 5, manager: "Anna" },
+  it: { employees: 8, manager: "Alex" },
+  sales: { employees: 12, manager: "Olga" }
+};
+
+function getDepartmentInfo(company, departmentName) {
+  return company[departmentName] || null;
+}
+
+console.log(getDepartmentInfo(company, "hr"));
+
+console.log(getDepartmentInfo(company, "it"));
+
+console.log(getDepartmentInfo(company, "sales"));
+
+console.log(getDepartmentInfo(company, "finance"));
+
+</script>
+
+</body>
+</html>
