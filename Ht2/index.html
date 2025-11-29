@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // tasks 1-7
+      const students = [
+        { name: "Алексей", grade: 85, isActive: true },
+        { name: "Мария", grade: 92, isActive: false },
+        { name: "Иван", grade: 78, isActive: true },
+        { name: "Ольга", grade: 95, isActive: true },
+        { name: "Сергей", grade: 62, isActive: false },
+        { name: "Анна", grade: 88, isActive: true },
+      ];
+
+      const studentNames = students.map((student) => student.name);
+      console.log("Names:", studentNames);
+
+      const activeStudent = students.filter((student) => student.isActive);
+      console.log("Active:", activeStudent);
+
+      const topStudent = students.findIndex((student) => student.grade > 90);
+      console.log("Grade: ", students[topStudent]);
+
+      students.forEach((student) => {
+        console.log(`Студент ${student.name} имеет оценку ${student.grade}`);
+      });
+
+      const hasInactive = students.some(
+        (student) => student.isActive === false
+      );
+      console.log("Inactive:", hasInactive);
+
+      const allActivePass = students
+        .filter((student) => student.isActive)
+        .every((student) => student.grade > 70);
+      console.log("Every active grade>70:", allActivePass);
+
+      const namesOfActiveStudent = students
+        .filter((student) => student.isActive)
+        .map((student) => student.name);
+      console.log("Names of active students:", namesOfActiveStudent);
+
+      // task8
+      const numbers = [10, 20, 30, 40, 50];
+      const sum = numbers.reduce((sum, current) => sum + current, 0);
+      console.log("Sum of nambers:", sum);
+
+      //   task9
+      const orders = [
+        { product: "Книга", price: 350 },
+        { product: "Флешка", price: 800 },
+        { product: "Блокнот", price: 150 },
+      ];
+
+      const totalPrice = orders.reduce(
+        (sum, current) => sum + current.price,
+        0
+      );
+      console.log("Price of orders:", totalPrice);
+
+      //   task10
+console.log("Task10 в чем задание?");
+
+    </script>
+  </body>
+</html>
