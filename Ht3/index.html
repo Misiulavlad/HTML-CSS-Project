@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Homework</title>
+    <style>
+        .highlight { background-color: yellow; }
+        .new-item { color: green; padding: 5px; margin: 5px 0; border-left: 3px solid green; }
+        .task-container { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>Мой Список Дел</h1>
+    </header>
+
+    <div class="task-container">
+        <h2>Задачи на сегодня:</h2>
+        <ul id="todo-list">
+            <li class="task">Выучить основы DOM</li>
+            <li class="task active">Сделать домашнее задание</li>
+            <li class="task">Прочитать статью про события</li>
+        </ul>
+    </div>
+
+    <div class="task-container">
+        <button id="action-btn">Нажми меня</button>
+        <button id="toggle-btn">Спрятать/Показать заголовок</button>
+        <button id="remove-last-btn">Удалить последнюю задачу</button>
+    </div>
+
+    <div class="task-container">
+        <input type="text" id="new-task-input" placeholder="Введите новую задачу...">
+        <button id="add-task-btn">Добавить задачу</button>
+    </div>
+
+    <footer id="page-footer">
+        <p>© 2023 Практика по JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
