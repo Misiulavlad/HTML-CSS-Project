@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;           
+  flex-direction: column;  
+  align-items: center;     
+  justify-content: center; 
+  min-height: 100vh;       
+  margin: 0;               
+}
+
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+  align-self: center;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.win {
+  background: lightgreen;
+}
+
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  min-height: 24px;
+}
